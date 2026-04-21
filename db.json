@@ -1,0 +1,100 @@
+{
+  "users": [
+    {
+      "id": "USR-1001",
+      "email": "admin@riskguard.com",
+      "password": "5325ef815182162ef970a495c2490bb4880b7388988be6bfbb2532e9a8a91332",
+      "name": "Admin User",
+      "role": "analyst",
+      "createdAt": "2026-01-01T00:00:00Z"
+    }
+  ],
+  "applicants": [
+    {
+      "id": "APP-9021",
+      "name": "Ananya Verma",
+      "age": 32,
+      "loanAmount": 1200000,
+      "income": 145000,
+      "creditScore": 785,
+      "employmentYears": 8,
+      "existingEMI": 12000,
+      "ltvRatio": 0.65,
+      "sector": "IT Services",
+      "loanType": "Home Loan",
+      "status": "approved",
+      "score": 18,
+      "band": "low",
+      "recommendation": "Approve",
+      "submittedAt": "2026-03-01T10:00:00Z",
+      "factors": [
+        { "name": "Credit Score", "value": 785, "impact": -0.8, "direction": "positive", "weight": 0.28 },
+        { "name": "Income-to-Loan Ratio", "value": "12.1%", "impact": -1.2, "direction": "positive", "weight": 0.22 },
+        { "name": "Loan-to-Value Ratio", "value": "65%", "impact": -0.5, "direction": "positive", "weight": 0.18 },
+        { "name": "EMI Obligation Burden", "value": "8.3%", "impact": -0.3, "direction": "positive", "weight": 0.16 },
+        { "name": "Employment Stability", "value": "8 yrs", "impact": -0.4, "direction": "positive", "weight": 0.10 },
+        { "name": "Sector Risk Index", "value": "IT Services", "impact": 0.2, "direction": "positive", "weight": 0.06 }
+      ]
+    },
+    {
+      "id": "APP-9022",
+      "name": "Vikram Singh",
+      "age": 45,
+      "loanAmount": 2500000,
+      "income": 95000,
+      "creditScore": 610,
+      "employmentYears": 15,
+      "existingEMI": 35000,
+      "ltvRatio": 0.88,
+      "sector": "Construction",
+      "loanType": "Business Loan",
+      "status": "rejected",
+      "score": 82,
+      "band": "high",
+      "recommendation": "Reject",
+      "submittedAt": "2026-04-01T11:30:00Z",
+      "factors": [
+        { "name": "Credit Score", "value": 610, "impact": 1.2, "direction": "negative", "weight": 0.28 },
+        { "name": "Income-to-Loan Ratio", "value": "3.8%", "impact": 1.8, "direction": "negative", "weight": 0.22 },
+        { "name": "Loan-to-Value Ratio", "value": "88%", "impact": 1.4, "direction": "negative", "weight": 0.18 },
+        { "name": "EMI Obligation Burden", "value": "36.8%", "impact": 1.6, "direction": "negative", "weight": 0.16 },
+        { "name": "Employment Stability", "value": "15 yrs", "impact": -0.6, "direction": "positive", "weight": 0.10 },
+        { "name": "Sector Risk Index", "value": "Construction", "impact": 0.9, "direction": "negative", "weight": 0.06 }
+      ]
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "AUD-1001",
+      "appId": "APP-9021",
+      "action": "Created",
+      "officer": "System",
+      "timestamp": "2026-03-01T10:00:00Z",
+      "note": "Initial system import"
+    },
+    {
+      "id": "AUD-1002",
+      "appId": "APP-9021",
+      "action": "Approved",
+      "officer": "Admin User",
+      "timestamp": "2026-03-01T14:00:00Z",
+      "note": "Application approved after manual review."
+    },
+    {
+      "id": "AUD-1003",
+      "appId": "APP-9022",
+      "action": "Created",
+      "officer": "System",
+      "timestamp": "2026-04-01T11:30:00Z",
+      "note": "Initial system import"
+    },
+    {
+      "id": "AUD-1004",
+      "appId": "APP-9022",
+      "action": "Rejected",
+      "officer": "Admin User",
+      "timestamp": "2026-04-01T15:30:00Z",
+      "note": "Application rejected: High NPA risk profile."
+    }
+  ]
+}
