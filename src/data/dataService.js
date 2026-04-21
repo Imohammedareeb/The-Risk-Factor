@@ -1,6 +1,6 @@
 import { predictRisk } from './riskEngine'
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001'
+const API_URL = import.meta.env.VITE_API_URL || (import.meta.env.PROD ? '/api' : 'http://localhost:3001')
 
 // Generic fetch with error handling
 async function apiFetch(url, options = {}) {
